@@ -28,6 +28,7 @@ Aplicativo web para el control y administración de notas de estudiantes.
     - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de _[ajaxToForm.js](Application/Assets/js/ajaxToForms.js)_ se realizan todas las peticiones al servidor mediante el uso de Ajax y en _[functionToDatatable.js](Application/Assets/js/functionToDatatable.js)_ se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
     - **Img:** Acá se almacenan los recursos graficos utilizados en el diseño de la aplicación.
     - **Docs:** En este directorio se almacenan los documentos de texto como el archivo de control de login.
+<br />
 
 ### Equipo de desarrollo:
 Las siguientes personas formaron parte del grupo que hizo posible la creación y funcionamiento de esta aplicación asi como el desarrollo de su documentación:
