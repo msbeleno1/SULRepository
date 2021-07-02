@@ -14,7 +14,7 @@ Aplicativo web para el control y administración de notas de estudiantes.
   1. En la carpeta MySql DataBase se encuentran los Scripts para la creación de la base de datos local. Cada script debe ejecutarse de manera secuencial en su cliente de base de datos MySql.
   2. Luego deberá crear un usuario de conexión local con su respectiva contraseña. En caso de querer evitar la menor configuración posible, se recomienda que el usuario sea **_phpUser_** y la contraseña sea **_phpUser123_**.
   3. Después, en la carpeta de la aplicación / Models se encuentra el archivo _[conexionBD.php](Application/Models/conexionBD.php)_ en donde se deberán configurar el usuario de conexión y su respectiva clave, en caso de haber creado un usuario o clave diferente a lo mencionado en el paso anterior.
-  4. Por último, para poder ejecutar la aplicación debe colocar la carpeta Aplication de este repositorio en la respectiva carpeta para desplegar la aplicación en PHP.
+  4. Por último, para poder ejecutar la aplicación debe colocar la carpeta Application de este repositorio en la respectiva carpeta para desplegar la aplicación en PHP.
 <br />
   
 ### Distribución:
