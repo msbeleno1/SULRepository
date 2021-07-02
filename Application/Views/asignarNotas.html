@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Free Use System</title>
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../Assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Assets/img/favicon-16x16.png">
+    <link rel="manifest" href="../Assets/img/site.webmanifest">
+    <link rel="mask-icon" href="../Assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/css/dataTables/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Assets/css/dataTables/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0 px-1">
+            <button class="navbar-toggler btn-nav my-1" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item nav-coor">
+                      <a class="nav-link text-center btn-nav" href="usuarios.html">Home</a>
+                    </li>
+                    <li class="nav-item active nav-prof">
+                        <a class="nav-link text-center btn-nav" href="asignarNotas.html">Asignar Notas</a>
+                    </li>
+                    <li class="nav-item nav-estu">
+                        <a class="nav-link text-center btn-nav" href="verNotas.html">Ver Notas</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="ml-auto mr-2 text-center btn-log text-decoration-none p-1 rounded" href="#">
+                <span id="lblUsuarioLog">Logout</span>
+                <em class="fas fa-sign-out-alt"></em>
+            </a>
+        </nav>
+    </header>
+    <section class="container-fluid px-1 mx-0 mb-1">
+        <div class="d-flex container-fluid justify-content-between mt-3">
+            <h2 class="h2 font-weight-light d-inline mb-0">Estudiantes</h2>
+        </div>
+        <hr class="mt-1">
+        <div class="container-fluid mt-2">
+            <table id="table-estudiantes" class="table table-bordered table-hover" aria-describedby="Tabla de estudiantes">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="text-center">Documento</th>
+                        <th scope="col" class="text-center">Nombre</th>
+                        <th scope="col" class="text-center text-nowrap">Nota final</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- MODAL DE ESTUDIANTE -->
+        <div class="modal fade" id="estudianteModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="estudianteModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="estudianteModalTitle">Editar notas</h5>
+                  <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <!-- FORMULARIO Y CUERPO DE LA PRIMERA PESTAÑA -->
+                <form action="" method="POST" id="formEstudiante" name="formEstudiante" class="needs-validation" novalidate>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="txtDocumento">Documento de identidad</label>
+                                <input type="hidden" class="form-control" id="opcion" name="opcion" value="edit" required>
+                                <input type="text" class="form-control text-center" id="txtDocumento" name="txtDocumento" readonly>
+                            </div>                                  
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtNombres">Nombres</label>
+                                <input type="text" class="form-control text-center" id="txtNombres" name="txtNombres" readonly>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtxCorreo">Correo</label>
+                                <input type="text" class="form-control text-center" id="txtxCorreo" name="txtxCorreo" readonly>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtNota1">Nota 1</label>
+                                <input type="text" class="form-control text-center" id="txtNota1" name="txtNota1" minlength="1" maxlength="10" value="0" pattern="^(0*([0-4])+([.])?([0-9]+)?)|5$" autocomplete="off" required>
+                                <div class="invalid-feedback text-justify">El campo debe tener mínimo 1 caracter y solo puede contener números entre 0 y 5.</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtNota2">Nota 2</label>
+                                <input type="text" class="form-control text-center" id="txtNota2" name="txtNota2" minlength="1" maxlength="10" value="0" pattern="^(0*([0-4])+([.])?([0-9]+)?)|5$" autocomplete="off" required>
+                                <div class="invalid-feedback text-justify">El campo debe tener mínimo 1 caracter y solo puede contener números entre 0 y 5.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="txtNota3">Nota 3</label>
+                                <input type="text" class="form-control text-center" id="txtNota3" name="txtNota3" minlength="1" maxlength="10" value="0" pattern="^(0*([0-4])+([.])?([0-9]+)?)|5$" autocomplete="off" required>
+                                <div class="invalid-feedback text-justify">El campo debe tener mínimo 1 caracter y solo puede contener números entre 0 y 5.</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="txtNota4">Nota 4</label>
+                                <input type="text" class="form-control text-center" id="txtNota4" name="txtNota4" minlength="1" maxlength="10" value="0" pattern="^(0*([0-4])+([.])?([0-9]+)?)|5$" autocomplete="off" required>
+                                <div class="invalid-feedback text-justify">El campo debe tener mínimo 1 caracter y solo puede contener números entre 0 y 5.</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label for="txtNotaFinal">Nota final</label>
+                                <input type="text" class="form-control text-center" id="txtNotaFinal" name="txtNotaFinal" value="0" readonly>
+                            </div>                                  
+                        </div>
+                    </div>
+
+                    <!-- FOOTER DEL MODAL -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-close" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-submit">Guardar</button>
+                    </div>
+                    <!-- FIN DEL FOOTER DEL MODAL -->
+
+                </form>
+              </div>
+            </div>
+          </div>  
+          <!-- FIN DEL MODAL DE USUARIO         -->
+
+        <!-- TARJETA DE NOTIFICACION -->
+        <div class="position-fixed bottom-0 right-0 p-3 notify-pane" aria-live="polite" aria-atomic="true">
+            
+            <!-- PARA EXITO -->
+            <div class="toast hide" id="toastSuccess" role="status" aria-live="polite" aria-atomic="true" data-animation="true" data-delay="5000">
+                <div class="toast-header bg-success">
+                    <span class="rounded mr-2 text-light">&#10003;</span>
+                    <strong class="mr-auto text-light">Éxito</strong>
+                    <small class="text-light">Ahora</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="lblToastSuccess" class="toast-body bg-light text-justify">
+                    Hello, world! This is a toast message success.
+                </div>
+            </div>
+
+            <!-- EN CASO DE ERROR -->
+            <div id="toastError" class="toast hide" use role="alert" aria-live="assertive" aria-atomic="true" data-animation="true" data-delay="5000">
+                <div class="toast-header bg-red">
+                    <span class="rounded mr-2 text-light">&#128711;</span>
+                    <strong class="mr-auto text-light">Error</strong>
+                    <small class="text-light">Ahora</small>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="lblToastError" class="toast-body bg-light text-justify">
+                  Hello, world! This is a toast message error.
+                </div>
+              </div>
+        </div>
+        <!-- FIN DE LA TARJETA DE NOTIFICACION -->
+    </section>
+
+    <footer class="m-0 p-0 row bg-dark justify-content-center text-light">
+        <h6 class="m-0 small pb-1 font-italic bg-dark">Copyright &copy; 2021 - All Rights Reserved</h6>
+    </footer>
+    <script src="https://kit.fontawesome.com/d51e0c6239.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="../Assets/js/dataTable/datatables.min.js"></script>
+    <script src="../Assets/js/dataTable/dataTables.bootstrap4.min.js"></script>
+    <script src="../Assets/js/dataTable/responsive.bootstrap4.min.js"></script>
+
+    <script src="../Assets/js/pageAccess.js"></script>
+    <script src="../Assets/js/functionToDatatable.js"></script>
+    <script src="../Assets/js/ajaxToForms.js"></script>
+    <script src="../Assets/js/functionToRegistro.js"></script>
+    <script src="../Assets/js/functionToForm.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>
