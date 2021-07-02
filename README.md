@@ -2,7 +2,7 @@
 Aplicativo web para el control y administración de notas de estudiantes.
 
 ### Tecnologías implementadas:
-  - PHP (Sin framewrok)
+  - PHP (Sin framework)
   - Html5
   - Css (Framework: Bootsrap)
   - Javascript (Framework: Jquery - Plugin: Datatables)
