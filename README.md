@@ -24,6 +24,6 @@ Aplicativo web para el control y administración de notas de estudiantes.
   - **Controllers:** En esta carpeta se almacenan los controladores usados para enviar la información a las vistas.
   - **Assets:** En este directorio se almacenan las subcarpetas con los archivos correspondientes a los estilos, los scripts de JavaScript, imágenes o documentos. Y se encuentra organizado de la siguiente forma:
     - **Css:** Acá se encuentran las hojas de estilos de la aplicación.
-    - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de [ajaxToForm.js](Aplicación/Activos/css/js/ajaxToForms.js) se realizan todas las peticiones al servidor mediante el uso de Ajax y en [functionToDatatable.js](Aplicación/Activos/css/js/functionToDatatable.js) se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
+    - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de [ajaxToForm.js](Aplication/Assets/css/js/ajaxToForms.js) se realizan todas las peticiones al servidor mediante el uso de Ajax y en [functionToDatatable.js](Aplication/Assets/css/js/functionToDatatable.js) se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
     - **Img:** Acá se almacenan los recursos graficos utilizados en el diseño de la aplicación.
     - **Docs:** En este directorio se almacenan los documentos de texto como el archivo de control de login.
