@@ -13,7 +13,7 @@ Aplicativo web para el control y administración de notas de estudiantes.
   Para su ejecución primero se debe configurar la base de datos de la siguiente manera:
   1. En la carpeta MySql DataBase se encuentran los Scripts para la creación de la base de datos local. Cada script debe ejecutarse de manera secuencial en su cliente de base de datos MySql.
   2. Luego deberá crear un usuario de conexión local con su respectiva contraseña. En caso de querer evitar la menor configuración posible, se recomienda que el usuario sea **_phpUser_** y la contraseña sea **_phpUser123_**.
-  3. Después, en la carpeta de la aplicación / Models se encuentra el archivo _[conexionBD.php](Aplication/Models/conexionBD.php)_ en donde se deberán configurar el usuario de conexión y su respectiva clave, en caso de haber creado un usuario o clave diferente a lo mencionado en el paso anterior.
+  3. Después, en la carpeta de la aplicación / Models se encuentra el archivo _[conexionBD.php](Application/Models/conexionBD.php)_ en donde se deberán configurar el usuario de conexión y su respectiva clave, en caso de haber creado un usuario o clave diferente a lo mencionado en el paso anterior.
   4. Por último, para poder ejecutar la aplicación debe colocar la carpeta Aplication de este repositorio en la respectiva carpeta para desplegar la aplicación en PHP.
 <br />
   
@@ -24,6 +24,6 @@ Aplicativo web para el control y administración de notas de estudiantes.
   - **Controllers:** En esta carpeta se almacenan los controladores usados para enviar la información a las vistas.
   - **Assets:** En este directorio se almacenan las subcarpetas con los archivos correspondientes a los estilos, los scripts de JavaScript, documentos y/o imágenes. Y se encuentra organizado de la siguiente forma:
     - **Css:** Acá se encuentran las hojas de estilos de la aplicación.
-    - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de _[ajaxToForm.js](Aplication/Assets/js/ajaxToForms.js)_ se realizan todas las peticiones al servidor mediante el uso de Ajax y en _[functionToDatatable.js](Aplication/Assets/js/functionToDatatable.js)_ se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
+    - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de _[ajaxToForm.js](Application/Assets/js/ajaxToForms.js)_ se realizan todas las peticiones al servidor mediante el uso de Ajax y en _[functionToDatatable.js](Application/Assets/js/functionToDatatable.js)_ se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
     - **Img:** Acá se almacenan los recursos graficos utilizados en el diseño de la aplicación.
     - **Docs:** En este directorio se almacenan los documentos de texto como el archivo de control de login.
