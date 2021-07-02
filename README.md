@@ -19,7 +19,7 @@ Aplicativo web para el control y administración de notas de estudiantes.
   
 ### Distribución:
   La distribución de la aplicación en general se divide en 4 carpetas:
-  - **Views:** Como nombre lo indica, en esta carpeta se encuentran alojadas todas las vistas o plantillas de HTML.
+  - **Views:** Como el nombre lo indica, en esta carpeta se encuentran alojadas todas las vistas o plantillas de HTML.
   - **Models:** Este nombre hace referencia a las clases de PHP utilizadas para el almacenamientos de datos y/o realización de algoritmos. Aquí se encuentran los Value Objects (Objetos de valor), los Data Access Objects (Objetos de acceso de datos) y algunas clases utiles como la conexión a la base de datos y el control del login.
   - **Controllers:** En esta carpeta se almacenan los controladores usados para enviar la información a las vistas.
   - **Assets:** En este directorio se almacenan las subcarpetas con los archivos correspondientes a los estilos, los scripts de JavaScript, documentos y/o imágenes. Y se encuentra organizado de la siguiente forma:
