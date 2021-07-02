@@ -37,4 +37,4 @@ Las siguientes personas formaron parte del grupo que hizo posible la creación y
 - **Michael Stally Beleño** - msbeleno1@misena.edu.co
 <br />
 
-Este repositorio fue el resultado de una actividad propuesta para la Clase de _"PROGRAMACIÓN EN PHP"_ del Servicio Nacional de Aprendizaje - SENA.
+Este repositorio fue el resultado de una actividad propuesta para la Clase de _"PROGRAMACIÓN EN PHP"_ del Servicio Nacional de Aprendizaje - SENA..
