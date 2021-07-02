@@ -22,7 +22,7 @@ Aplicativo web para el control y administración de notas de estudiantes.
   - **Views:** Como nombre lo indica, en esta carpeta se encuentran alojadas todas las vistas o plantillas de HTML.
   - **Models:** Este nombre hace referencia a las clases de PHP utilizadas para el almacenamientos de datos y/o realización de algoritmos. Aquí se encuentran los Value Objects (Objetos de valor), los Data Access Objects (Objetos de acceso de datos) y algunas clases utiles como la conexión a la base de datos y el control del login.
   - **Controllers:** En esta carpeta se almacenan los controladores usados para enviar la información a las vistas.
-  - **Assets:** En este directorio se almacenan las subcarpetas con los archivos correspondientes a los estilos, los scripts de JavaScript, imágenes o documentos. Y se encuentra organizado de la siguiente forma:
+  - **Assets:** En este directorio se almacenan las subcarpetas con los archivos correspondientes a los estilos, los scripts de JavaScript, documentos y/o imágenes. Y se encuentra organizado de la siguiente forma:
     - **Css:** Acá se encuentran las hojas de estilos de la aplicación.
     - **Js:** Contiene las hojas de código de JavaScript y Jquery. En la hoja de _[ajaxToForm.js](Aplication/Assets/js/ajaxToForms.js)_ se realizan todas las peticiones al servidor mediante el uso de Ajax y en _[functionToDatatable.js](Aplication/Assets/js/functionToDatatable.js)_ se realizan todo el proceso de cargar la información en las respectivas tablas de Estudiantes o Usuarios.
     - **Img:** Acá se almacenan los recursos graficos utilizados en el diseño de la aplicación.
